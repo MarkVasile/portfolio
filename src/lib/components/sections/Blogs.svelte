@@ -128,31 +128,6 @@
 		{/each}
 	</div>
 	
-	<div class="blogs-cta">
-		<p>
-		{#if isReady}
-			{$_('blogs.ctaDescription')}
-		{:else}
-			Stay updated with my latest thoughts on software development, AI, and technology trends.
-		{/if}
-	</p>
-		<div class="cta-buttons">
-			<a href="https://medium.com/@markvasile" target="_blank" rel="noopener noreferrer" class="btn">
-				{#if isReady}
-					{$_('blogs.medium')}
-				{:else}
-					Medium Articles
-				{/if}
-			</a>
-			<a href="https://codeawareness.substack.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-				{#if isReady}
-					{$_('blogs.substack')}
-				{:else}
-					Substack Newsletter
-				{/if}
-			</a>
-		</div>
-	</div>
 	{/await}
 </section>
 

@@ -48,55 +48,6 @@
 <section class="section" id="contact">
 	{#await waitLocale() then}
 	<h2 class="section-title">Get In Touch</h2>
-	<p class="section-subtitle">
-		{#if isReady}
-			{$_('contact.subtitle')}
-		{:else}
-			Let's connect and discuss opportunities, collaborations, or just have a chat about technology.
-		{/if}
-	</p>
-	
-	<div class="contact-content">
-		<div class="contact-info">
-			<div class="contact-card">
-				<div class="contact-icon">📧</div>
-				<h3>
-					{$_('contact.emailTitle')}
-				</h3>
-				<p>mark@markvasile.com</p>
-				<button class="btn btn-secondary" onclick={copyEmail}>
-					{$_('contact.copyEmail')}
-				</button>
-			</div>
-			
-			<div class="contact-card">
-				<div class="contact-icon">🌐</div>
-				<h3>
-					{$_('contact.websiteTitle')}
-				</h3>
-				<p>markvasile.com</p>
-				<a href="https://markvasile.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-					{$_('contact.visitSite')}
-				</a>
-			</div>
-		</div>
-		
-		<div class="social-section">
-			<h3>
-				{$_('contact.socialTitle')}
-			</h3>
-			<div class="social-grid">
-				{#each socialLinks as social}
-					<a href={social.url} target="_blank" rel="noopener noreferrer" class="social-link">
-						<div class="social-icon" style="background-color: {social.color}">
-							{social.icon}
-						</div>
-						<span class="social-name">{social.name}</span>
-					</a>
-				{/each}
-			</div>
-		</div>
-	</div>
 	
 	<div class="contact-cta">
 		<div class="cta-content">
@@ -114,25 +65,24 @@
 					Whether you're looking for a software engineer, want to collaborate on a project, or just want to chat about technology, I'd love to hear from you!
 				{/if}
 			</p>
-			
-			<div class="cta-actions">
-				<a href="mailto:mark@markvasile.com" class="btn">
-					{#if isReady}
-						{$_('contact.sendEmail')}
-					{:else}
-						Send Email
-					{/if}
-				</a>
-				<a href="https://linkedin.com/in/markvasile" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-					{#if isReady}
-						{$_('contact.connectLinkedIn')}
-					{:else}
-						Connect on LinkedIn
-					{/if}
-				</a>
+		</div>
+	</div>
+
+	<div class="contact-content">
+		<div class="social-section">
+			<div class="social-grid">
+				{#each socialLinks as social}
+					<a href={social.url} target="_blank" rel="noopener noreferrer" class="social-link">
+						<div class="social-icon" style="background-color: {social.color}">
+							{social.icon}
+						</div>
+						<span class="social-name">{social.name}</span>
+					</a>
+				{/each}
 			</div>
 		</div>
 	</div>
+	
 	
 	<footer class="footer">
 		<div class="footer-content">
@@ -182,13 +132,6 @@
 		</div>
 		
 		<div class="footer-bottom">
-			<p>&copy; 2025 Mark Vasile.
-				{#if isReady}
-					{$_('contact.footer.rightsReserved')}
-				{:else}
-					All rights reserved.
-				{/if}
-			</p>
 			<p>
 				{#if isReady}
 					{$_('contact.footer.builtWith')}
@@ -202,9 +145,10 @@
 </section>
 
 <style>
+
 	.contact-content {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto;
 		gap: 4rem;
 		margin-bottom: 4rem;
 	}
@@ -258,7 +202,7 @@
 	
 	.social-grid {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		gap: 1.5rem;
 	}
 	

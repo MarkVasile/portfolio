@@ -56,7 +56,7 @@
 			</p>
 			
 			<div class="hero-actions">
-				<button class="btn" on:click={() => scrollToSection('github')}>
+				<button class="btn" on:click={() => scrollToSection('projects')}>
 					{#if isReady}
 						{$_('hero.cta')}
 					{:else}
@@ -85,13 +85,13 @@
 					<span class="keyword">const</span> 
 					<span class="variable">passion</span> 
 					<span class="operator">=</span> 
-					<span class="string">'Building amazing software'</span>;
+					<span class="string">'Work better with people'</span>;
 				</div>
 				<div class="code-line">
 					<span class="keyword">const</span> 
 					<span class="variable">mission</span> 
 					<span class="operator">=</span> 
-					<span class="function">solveProblems</span>(<span class="variable">passion</span>);
+					<span class="function">solveProblems</span><span class="variable">(passion)</span>;
 				</div>
 			</div>
 		</div>

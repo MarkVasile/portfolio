@@ -10,11 +10,18 @@
     "description": "I'm a passionate software engineer with expertise in full-stack development, AI integration, and system architecture. I love building tools that solve real-world problems and exploring new technologies.",
     "skills": "Skills & Technologies",
     "focus": "Current Focus",
+    "focusItems": {
+      "aiTools": "AI-enabled Development Tools",
+      "codeIntelligence": "Code Intelligence and Analytics",
+      "productivity": "Productivity and Collaboration solutions",
+      "openSource": "Participating in Open Source Projects"
+    },
     "stats": {
       "yearsExperience": "Years Experience",
       "projectsCompleted": "Projects Completed",
       "technologies": "Technologies",
-      "passionForCode": "Passion for Code"
+      "passionForCode": "Passion for Code",
+      "continents": "Continents"
     }
   },
   "github": {

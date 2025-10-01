@@ -13,18 +13,27 @@
 	});
 	
 	const skills = [
-		'JavaScript/TypeScript',
+		'TypeScript',
 		'Python',
 		'Rust',
+		'Ruby',
+		'C#',
+		'C',
+		'C++',
 		'Node.js',
-		'React/Svelte',
+		'React',
+    'Svelte',
+    'Angular',
+    'VueJS',
+    'MongoDB',
 		'PostgreSQL',
-		'MongoDB',
 		'Docker',
 		'Kubernetes',
 		'AI/ML Integration',
 		'System Architecture',
-		'Cloud Computing'
+		'Cloud Computing',
+    'AWS',
+    'GCP',
 	];
 	
 	const currentFocus = [
@@ -101,7 +110,7 @@
 		<div class="about-visual">
 			<div class="stats-grid">
 				<div class="stat-item">
-					<div class="stat-number">5+</div>
+					<div class="stat-number">25+</div>
 					<div class="stat-label">
 						{#if isReady}
 							{$_('about.stats.yearsExperience')}
@@ -121,7 +130,7 @@
 					</div>
 				</div>
 				<div class="stat-item">
-					<div class="stat-number">10+</div>
+					<div class="stat-number">40+</div>
 					<div class="stat-label">
 						{#if isReady}
 							{$_('about.stats.technologies')}
@@ -131,12 +140,12 @@
 					</div>
 				</div>
 				<div class="stat-item">
-					<div class="stat-number">∞</div>
+					<div class="stat-number">3</div>
 					<div class="stat-label">
 						{#if isReady}
-							{$_('about.stats.passionForCode')}
+							{$_('about.stats.continents')}
 						{:else}
-							Passion for Code
+							Continents
 						{/if}
 					</div>
 				</div>

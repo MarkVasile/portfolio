@@ -2,7 +2,7 @@
   "hero": {
     "title": "マーク・ヴァシレ",
     "subtitle": "ソフトウェアエンジニア",
-    "description": "革新的なソリューションを構築し、テクノロジーと創造性の交差点を探求しています。",
+    "description": "革新的なソリューションを構築し、テクノロジーと創造性の交差点を探求しています。もちろん日本語も話せますよ。書いたり読んだりするのも出来ますがやはり日本人のレベルまで道が長いでしょうかと思います。",
     "cta": "作品を見る"
   },
   "about": {
@@ -20,7 +20,8 @@
       "yearsExperience": "年の経験",
       "projectsCompleted": "プロジェクト完了",
       "technologies": "技術",
-      "passionForCode": "コードへの情熱"
+      "passionForCode": "コードへの情熱",
+      "continents": "大陸"
     }
   },
   "github": {
