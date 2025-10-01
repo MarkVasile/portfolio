@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "title": "マーク・ヴァシレ",
+    "subtitle": "ソフトウェアエンジニア",
+    "description": "革新的なソリューションを構築し、テクノロジーと創造性の交差点を探求しています。",
+    "cta": "作品を見る"
+  },
+  "about": {
+    "title": "私について",
+    "description": "フルスタック開発、AI統合、システムアーキテクチャに専門知識を持つ情熱的なソフトウェアエンジニアです。現実世界の問題を解決するツールを構築し、新しいテクノロジーを探求することが大好きです。",
+    "skills": "スキルと技術",
+    "focus": "現在の焦点",
+    "focusItems": {
+      "aiTools": "AI駆動の開発ツール",
+      "codeIntelligence": "コード認識とインテリジェンス",
+      "productivity": "開発者生産性ソリューション",
+      "openSource": "オープンソースへの貢献"
+    },
+    "stats": {
+      "yearsExperience": "年の経験",
+      "projectsCompleted": "プロジェクト完了",
+      "technologies": "技術",
+      "passionForCode": "コードへの情熱"
+    }
+  },
+  "github": {
+    "title": "GitHubポートフォリオ",
+    "subtitle": "オープンソースへの貢献とプロジェクトを探索",
+    "personal": "個人プロジェクト",
+    "codeawareness": "CodeAwareness",
+    "viewProfile": "プロフィールを見る",
+    "viewRepo": "リポジトリを見る",
+    "other": "その他"
+  },
+  "blogs": {
+    "title": "執筆とブログ",
+    "subtitle": "様々なプラットフォームでの執筆をフォロー",
+    "pageTitle": "ブログ",
+    "pageDescription": "ソフトウェア開発、AI、テクノロジーに関する私の思考と洞察を共有します。",
+    "medium": "Medium記事",
+    "substack": "Substackニュースレター",
+    "ghost": "Ghostブログ",
+    "readMore": "続きを読む",
+    "recentArticles": "最近の記事",
+    "newsletterTopics": "ニュースレタートピック",
+    "technicalContent": "技術コンテンツ",
+    "ctaDescription": "ソフトウェア開発、AI、テクノロジーのトレンドに関する最新の考えをフォローしてください。"
+  },
+  "projects": {
+    "title": "トイプロジェクト",
+    "subtitle": "実験的なプロジェクトとクリエイティブコーディングの実験",
+    "comingSoon": "近日公開",
+    "viewProject": "プロジェクトを見る",
+    "active": "アクティブ",
+    "planned": "計画中",
+    "showLess": "少なく表示",
+    "showAll": "全{count}プロジェクトを表示",
+    "collaborationTitle": "コラボレーションに興味がありますか？",
+    "collaborationDescription": "新しいプロジェクトに取り組み、革新的なアイデアを探求することに常に興奮しています。一緒に素晴らしいものを作りましょう！",
+    "getInTouch": "お問い合わせ",
+    "descriptions": {
+      "speedOfLight": "光の速度電界をシミュレートするプロジェクト",
+      "hypercube": "多次元ハイパーキューブでXMASという単語が任意の方向に何回現れるかをカウントする",
+      "codeAwareness": "インテリジェントなコード洞察とコンテキスト認識支援を提供するAI駆動の開発環境。",
+      "mongoAlias": "MongoDB Nodeドライバーの上に構築された軽量なエイリアシング層",
+      "emacsPackage": "Code Awareness用のEmacsパッケージ",
+      "portfolio": "私のポートフォリオウェブサイト"
+    }
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "機会、コラボレーションについて話し合ったり、テクノロジーについておしゃべりしましょう。",
+    "email": "メールを送る",
+    "emailTitle": "メールを送る",
+    "social": "フォローする",
+    "socialTitle": "フォローする",
+    "website": "ウェブサイト",
+    "websiteTitle": "ウェブサイト",
+    "copyEmail": "メールをコピー",
+    "visitSite": "サイトを訪問",
+    "sendEmail": "メールを送信",
+    "connectLinkedIn": "LinkedInでつながる",
+    "buildTogetherTitle": "一緒に素晴らしいものを作りましょう",
+    "buildTogetherDescription": "ソフトウェアエンジニアを探している、プロジェクトでコラボレーションしたい、またはテクノロジーについておしゃべりしたい場合でも、お気軽にお声がけください！",
+    "footer": {
+      "rightsReserved": "全著作権所有。",
+      "builtWith": "Svelteで❤️と共に構築",
+      "sections": {
+        "about": "について",
+        "github": "GitHub",
+        "blogs": "ブログ",
+        "projects": "プロジェクト",
+        "contact": "お問い合わせ"
+      }
+    }
+  },
+  "navigation": {
+    "about": "について",
+    "github": "GitHub",
+    "blogs": "ブログ",
+    "projects": "プロジェクト",
+    "contact": "お問い合わせ"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "コンテンツの読み込みエラー",
+    "retry": "再試行"
+  }
+}

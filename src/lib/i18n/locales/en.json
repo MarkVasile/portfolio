@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "title": "Mark Vasile",
+    "subtitle": "Software Engineer",
+    "description": "Building innovative solutions and exploring the intersection of technology and creativity.",
+    "cta": "Explore My Work"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a passionate software engineer with expertise in full-stack development, AI integration, and system architecture. I love building tools that solve real-world problems and exploring new technologies.",
+    "skills": "Skills & Technologies",
+    "focus": "Current Focus",
+    "stats": {
+      "yearsExperience": "Years Experience",
+      "projectsCompleted": "Projects Completed",
+      "technologies": "Technologies",
+      "passionForCode": "Passion for Code"
+    }
+  },
+  "github": {
+    "title": "GitHub Portfolio",
+    "subtitle": "Explore my open source contributions and projects",
+    "personal": "Personal Projects",
+    "codeawareness": "CodeAwareness",
+    "viewProfile": "View Profile",
+    "viewRepo": "View Repository",
+    "other": "Other"
+  },
+  "blogs": {
+    "title": "Writing & Blog",
+    "subtitle": "Follow my writing across different platforms",
+    "medium": "Medium Articles",
+    "substack": "Substack Newsletter",
+    "ghost": "Ghost Blog",
+    "readMore": "Read More",
+    "recentArticles": "Recent Articles",
+    "newsletterTopics": "Newsletter Topics",
+    "technicalContent": "Technical Content",
+    "ctaDescription": "Stay updated with my latest thoughts on software development, AI, and technology trends."
+  },
+  "projects": {
+    "title": "Toy Projects",
+    "subtitle": "Experimental projects and creative coding experiments",
+    "comingSoon": "Coming Soon",
+    "viewProject": "View Project",
+    "active": "Active",
+    "planned": "Planned",
+    "showLess": "Show Less",
+    "showAll": "Show All {count} Projects",
+    "collaborationTitle": "Interested in Collaboration?",
+    "collaborationDescription": "I'm always excited to work on new projects and explore innovative ideas. Let's build something amazing together!",
+    "getInTouch": "Get In Touch",
+    "descriptions": {
+      "speedOfLight": "A project to simulate the speed of light electric field",
+      "hypercube": "Count the number of times the word XMAS shows up in any direction in a multi-dimensional hypercube",
+      "codeAwareness": "AI-powered development environment that provides intelligent code insights and context-aware assistance.",
+      "mongoAlias": "A lightweight aliasing layer on top of mongodb node driver",
+      "emacsPackage": "Emacs package for Code Awareness",
+      "portfolio": "My portfolio website"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's connect and discuss opportunities, collaborations, or just have a chat about technology.",
+    "email": "Email Me",
+    "emailTitle": "Email Me",
+    "social": "Follow Me",
+    "socialTitle": "Follow Me",
+    "website": "Website",
+    "websiteTitle": "Website",
+    "copyEmail": "Copy Email",
+    "visitSite": "Visit Site",
+    "sendEmail": "Send Email",
+    "connectLinkedIn": "Connect on LinkedIn",
+    "buildTogetherTitle": "Let's Build Something Amazing Together",
+    "buildTogetherDescription": "Whether you're looking for a software engineer, want to collaborate on a project, or just want to chat about technology, I'd love to hear from you!",
+    "footer": {
+      "rightsReserved": "All rights reserved.",
+      "builtWith": "Built with ❤️ using Svelte",
+      "sections": {
+        "about": "About",
+        "github": "GitHub",
+        "blogs": "Blogs",
+        "projects": "Projects",
+        "contact": "Contact"
+      }
+    }
+  },
+  "navigation": {
+    "about": "About",
+    "github": "GitHub",
+    "blogs": "Blogs",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error loading content",
+    "retry": "Retry"
+  }
+}
