@@ -35,13 +35,13 @@
 			image: 'https://miro.medium.com/v2/resize:fit:1400/format:webp/1*_wAM4gNmin-W0ROSJkKowQ.png',
 		},
 		{
-			name: 'CodeAwareness Platform',
-			description: 'AI-powered development environment that provides intelligent code insights and context-aware assistance.',
-			descriptionKey: 'codeAwareness',
-			technologies: ['TypeScript', 'Rust', 'AI/ML', 'WebSocket'],
+			name: 'Kawa Code Platform',
+			description: 'AI-powered development environment.',
+			descriptionKey: 'KawaCode',
+			technologies: ['TypeScript', 'Rust', 'AI/ML', 'WebSocket', 'IPC'],
 			status: 'active',
 			url: 'https://github.com/CodeAwareness',
-			image: '/codeawareness.jpg'
+			image: '/kawa-code-logo-white.jpg'
 		},
 		{
 			name: 'Mongo-Alias',

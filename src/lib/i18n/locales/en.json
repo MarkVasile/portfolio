@@ -60,7 +60,7 @@
     "descriptions": {
       "speedOfLight": "A project to simulate the speed of light electric field",
       "hypercube": "Count the number of times the word XMAS shows up in any direction in a multi-dimensional hypercube",
-      "codeAwareness": "AI-powered development environment that provides intelligent code insights and context-aware assistance.",
+      "KawaCode": "AI-powered development platform.",
       "mongoAlias": "A lightweight aliasing layer on top of mongodb node driver",
       "emacsPackage": "Emacs package for Code Awareness",
       "portfolio": "My portfolio website"

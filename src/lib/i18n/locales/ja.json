@@ -62,7 +62,7 @@
     "descriptions": {
       "speedOfLight": "光の速度電界をシミュレートするプロジェクト",
       "hypercube": "多次元ハイパーキューブでXMASという単語が任意の方向に何回現れるかをカウントする",
-      "codeAwareness": "インテリジェントなコード洞察とコンテキスト認識支援を提供するAI駆動の開発環境。",
+      "KawaCode": "AI駆動の開発環境。",
       "mongoAlias": "MongoDB Nodeドライバーの上に構築された軽量なエイリアシング層",
       "emacsPackage": "Code Awareness用のEmacsパッケージ",
       "portfolio": "私のポートフォリオウェブサイト"
