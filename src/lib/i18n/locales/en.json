@@ -52,6 +52,7 @@
     "viewProject": "View Project",
     "active": "Active",
     "planned": "Planned",
+    "archived": "Archived",
     "showLess": "Show Less",
     "showAll": "Show All {count} Projects",
     "collaborationTitle": "Interested in Collaboration?",
@@ -63,7 +64,8 @@
       "KawaCode": "AI-powered development platform.",
       "mongoAlias": "A lightweight aliasing layer on top of mongodb node driver",
       "emacsPackage": "Emacs package for Code Awareness",
-      "portfolio": "My portfolio website"
+      "portfolio": "My portfolio website",
+      "lisa": "A community for fans of the Japanese artist Lisa to translate articles in various languages"
     }
   },
   "contact": {

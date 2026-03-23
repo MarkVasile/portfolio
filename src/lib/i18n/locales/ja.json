@@ -54,6 +54,7 @@
     "viewProject": "プロジェクトを見る",
     "active": "アクティブ",
     "planned": "計画中",
+    "archived": "アーカイブ",
     "showLess": "少なく表示",
     "showAll": "全{count}プロジェクトを表示",
     "collaborationTitle": "コラボレーションに興味がありますか？",
@@ -65,7 +66,8 @@
       "KawaCode": "AI駆動の開発環境。",
       "mongoAlias": "MongoDB Nodeドライバーの上に構築された軽量なエイリアシング層",
       "emacsPackage": "Code Awareness用のEmacsパッケージ",
-      "portfolio": "私のポートフォリオウェブサイト"
+      "portfolio": "私のポートフォリオウェブサイト",
+      "lisa": "日本アーティストLisaのファンクラブ。様々な言語で記事を翻訳するコミュニティ"
     }
   },
   "contact": {

@@ -70,6 +70,15 @@
 			url: 'https://github.com/MarkVasile/portfolio',
 			image: null
 		},
+		{
+			name: 'Artist fan-club (archived)',
+			description: 'A community for fans of the Japanese artist Lisa to translate articles in various languages',
+			descriptionKey: 'lisa',
+			technologies: ['Vue3', 'nodeJS', 'MongoDB', 'Fastify', 'vue-i18n'],
+			status: 'archived',
+			url: 'https://lisa.markvasile.org',
+			image: '/lisa.jpg'
+		},
 	];
 	
 	let visibleProjects = $derived(showAllProjects ? toyProjects : toyProjects.slice(0, 3));
@@ -92,7 +101,7 @@
 	
 	<div class="projects-grid">
 		{#each visibleProjects as project}
-			<div class="project-card" class:planned={project.status === 'planned'}>
+			<div class="project-card" class:planned={project.status === 'planned'} class:archived={project.status === 'archived'}>
 				{#if project.image}
 					<div class="project-image">
 						<img src={project.image} alt={project.name} />
@@ -106,8 +115,8 @@
 				<div class="project-content">
 					<div class="project-header">
 						<h3 class="project-name">{project.name}</h3>
-						<span class="project-status" class:active={project.status === 'active'} class:planned={project.status === 'planned'}>
-							{project.status === 'active' ? 'Active' : 'Planned'}
+						<span class="project-status" class:active={project.status === 'active'} class:planned={project.status === 'planned'} class:archived={project.status === 'archived'}>
+							{project.status === 'active' ? 'Active' : (project.status === 'archived' ? 'Archived' : 'Planned')}
 						</span>
 					</div>
 					
@@ -200,6 +209,11 @@
 	
 	.project-card.planned {
 		opacity: 0.7;
+	}
+	
+	.project-card.archived {
+		opacity: 0.7;
+		color:darkblue;
 	}
 	
 	.project-image {
