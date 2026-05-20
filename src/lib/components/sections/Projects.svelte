@@ -79,6 +79,24 @@
 			url: 'https://lisa.markvasile.org',
 			image: '/lisa.jpg'
 		},
+		{
+			name: 'Japanese Mentorship Academy (archived)',
+			description: 'A courseware and mentorship platform built from scratch for one of my Japanese clients.',
+			descriptionKey: 'shibajimu-web',
+			technologies: ['Vue3', 'nodeJS', 'MongoDB', 'Fastify', 'vue-i18n'],
+			status: 'archived',
+			url: 'https://shibajimu-web.markvasile.org',
+			image: '/shibajimu-web.jpg'
+		},
+		{
+			name: 'Japanese Mentorship Academy (admin dashboard)',
+			description: 'Admin Dashboard for Shibajimu Academy',
+			descriptionKey: 'shibajimu-dash',
+			technologies: ['Vue3', 'nodeJS', 'MongoDB', 'Fastify', 'vue-i18n'],
+			status: 'archived',
+			url: 'https://shibajimu-dash.markvasile.org',
+			image: '/shibajimu-dash.jpg'
+		},
 	];
 	
 	let visibleProjects = $derived(showAllProjects ? toyProjects : toyProjects.slice(0, 3));
