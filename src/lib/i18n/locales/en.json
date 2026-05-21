@@ -46,7 +46,7 @@
     "ctaDescription": "Stay updated with my latest posts on software development, AI, and technology trends."
   },
   "projects": {
-    "title": "Toy Projects",
+    "title": "Past Projects",
     "subtitle": "Experimental projects and creative coding experiments",
     "comingSoon": "Coming Soon",
     "viewProject": "View Project",
@@ -65,7 +65,10 @@
       "mongoAlias": "A lightweight aliasing layer on top of mongodb node driver",
       "emacsPackage": "Emacs package for Code Awareness",
       "portfolio": "My portfolio website",
-      "lisa": "A community for fans of the Japanese artist Lisa to translate articles in various languages"
+      "lisa": "A community for fans of the Japanese artist Lisa to translate articles in various languages",
+      "shibajimu-web": "A courseware and mentorship platform built from scratch for one of my Japanese clients.",
+      "shibajimu-dash": "Admin Dashboard for Shibajimu Academy",
+      "clique-in-style": "A fashion matcher for your wedding planner"
     }
   },
   "contact": {

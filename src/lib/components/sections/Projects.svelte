@@ -97,6 +97,15 @@
 			url: 'https://shibajimu-dash.markvasile.org',
 			image: '/shibajimu-dash.jpg'
 		},
+		{
+			name: 'CliqueInStyle wedding planner',
+			description: 'A fashion matcher for your wedding planner',
+			descriptionKey: 'clique-in-style',
+			technologies: ['Vue3', 'nodeJS', 'MongoDB', 'ONNX', 'LLM'],
+			status: 'archived',
+			url: 'https://cns.markvasile.org',
+			image: '/cns.jpg'
+		},
 	];
 	
 	let visibleProjects = $derived(showAllProjects ? toyProjects : toyProjects.slice(0, 3));
