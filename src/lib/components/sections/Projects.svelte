@@ -106,6 +106,15 @@
 			url: 'https://cns.markvasile.org',
 			image: '/cns.jpg'
 		},
+		{
+			name: 'Champ Forge',
+			description: 'A battle configurator for League of Legends',
+			descriptionKey: 'champforge',
+			technologies: ['Svelte', 'nodeJS', 'MongoDB'],
+			status: 'archived',
+			url: 'https://champforge.markvasile.org',
+			image: '/champforge.jpg'
+		},
 	];
 	
 	let visibleProjects = $derived(showAllProjects ? toyProjects : toyProjects.slice(0, 3));
