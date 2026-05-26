@@ -178,7 +178,7 @@
 					<div class="project-header">
 						<h3 class="project-name">{project.name}</h3>
 						<span class="project-status" class:active={project.status === 'active'} class:planned={project.status === 'planned'} class:archived={project.status === 'archived'}>
-							{project.status === 'active' ? 'Active' : (project.status === 'archived' ? 'Archived' : 'Planned')}
+							{project.status}
 						</span>
 					</div>
 					
