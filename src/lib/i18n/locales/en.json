@@ -58,7 +58,9 @@
     "collaborationTitle": "Interested in Collaboration?",
     "collaborationDescription": "I'm always excited to work on new projects and explore innovative ideas. Let's build something amazing together!",
     "getInTouch": "Get In Touch",
+    "kawaRebuilt": "Project completely rebuilt from legacy code to modern frameworks, using Kawa Code",
     "descriptions": {
+      "listingpr": "A realtor management platform",
       "speedOfLight": "A project to simulate the speed of light electric field",
       "hypercube": "Count the number of times the word XMAS shows up in any direction in a multi-dimensional hypercube",
       "KawaCode": "AI-powered development platform.",

@@ -12,16 +12,24 @@
 		return unsubscribe;
 	});
 	
-	let showAllProjects = $state(false);
-	
 	// This will be easily editable for future projects
 	const toyProjects = [
+		{
+			name: 'ListingPR',
+			description: 'A realtor management platform',
+			descriptionKey: 'listingpr',
+			technologies: ['Vue3', 'nodeJS', 'MongoDB', 'GCP', 'puppeteer'],
+			status: 'archived (2013)',
+			url: 'https://listingpr.markvasile.org',
+			image: '/listingpr.jpg',
+      kawa: true,
+		},
 		{
 			name: 'Speed of light electric field simulations',
 			description: 'A project to simulate the speed of light electric field',
 			descriptionKey: 'speedOfLight',
 			technologies: ['Python', 'Javascript'],
-			status: 'active',
+			status: 'active (2025)',
 			url: 'https://github.com/MarkVasile/speed_of_light_in_a_medium',
 			image: '/speed_of_light.jpg'
 		},
@@ -30,7 +38,7 @@
 			description: 'Count the number of times the word XMAS shows up in any direction in a multi-dimensional hypercube',
 			descriptionKey: 'hypercube',
 			technologies: ['Javascript', 'Python'],
-			status: 'active',
+			status: 'archived (2025)',
 			url: 'https://github.com/MarkVasile/hypercube-xmas',
 			image: 'https://miro.medium.com/v2/resize:fit:1400/format:webp/1*_wAM4gNmin-W0ROSJkKowQ.png',
 		},
@@ -39,7 +47,7 @@
 			description: 'AI-powered development environment.',
 			descriptionKey: 'KawaCode',
 			technologies: ['TypeScript', 'Rust', 'AI/ML', 'WebSocket', 'IPC'],
-			status: 'active',
+			status: 'active (2019)',
 			url: 'https://github.com/CodeAwareness',
 			image: '/kawa-code-logo-white.jpg'
 		},
@@ -48,7 +56,7 @@
 			description: 'A lightweight aliasing layer on top of mongodb node driver',
 			descriptionKey: 'mongoAlias',
 			technologies: ['Node.js', 'MongoDB', 'TypeScript'],
-			status: 'active',
+			status: 'active (2020)',
 			url: 'https://github.com/CodeAwareness/mongo-alias',
 			image: null
 		},
@@ -57,7 +65,7 @@
 			description: 'Emacs package for Code Awareness',
 			descriptionKey: 'emacsPackage',
 			technologies: ['Emacs', 'Lisp'],
-			status: 'active',
+			status: 'active (2020)',
 			url: 'https://github.com/CodeAwareness/ca.emacs',
 			image: null
 		},
@@ -66,25 +74,27 @@
 			description: 'My portfolio website',
 			descriptionKey: 'portfolio',
 			technologies: ['Svelte', 'SvelteKit', 'TailwindCSS'],
-			status: 'active',
+			status: 'active (2025)',
 			url: 'https://github.com/MarkVasile/portfolio',
-			image: null
+			image: null,
+      kawa: true,
 		},
 		{
 			name: 'Artist fan-club (archived)',
 			description: 'A community for fans of the Japanese artist Lisa to translate articles in various languages',
 			descriptionKey: 'lisa',
 			technologies: ['Vue3', 'nodeJS', 'MongoDB', 'Fastify', 'vue-i18n'],
-			status: 'archived',
+			status: 'archived (2014)',
 			url: 'https://lisa.markvasile.org',
-			image: '/lisa.jpg'
+			image: '/lisa.jpg',
+      kawa: true,
 		},
 		{
 			name: 'Japanese Mentorship Academy (archived)',
 			description: 'A courseware and mentorship platform built from scratch for one of my Japanese clients.',
 			descriptionKey: 'shibajimu-web',
 			technologies: ['Vue3', 'nodeJS', 'MongoDB', 'Fastify', 'vue-i18n'],
-			status: 'archived',
+			status: 'archived (2019)',
 			url: 'https://shibajimu-web.markvasile.org',
 			image: '/shibajimu-web.jpg'
 		},
@@ -93,7 +103,7 @@
 			description: 'Admin Dashboard for Shibajimu Academy',
 			descriptionKey: 'shibajimu-dash',
 			technologies: ['Vue3', 'nodeJS', 'MongoDB', 'Fastify', 'vue-i18n'],
-			status: 'archived',
+			status: 'archived (2016)',
 			url: 'https://shibajimu-dash.markvasile.org',
 			image: '/shibajimu-dash.jpg'
 		},
@@ -102,26 +112,33 @@
 			description: 'A fashion matcher for your wedding planner',
 			descriptionKey: 'clique-in-style',
 			technologies: ['Vue3', 'nodeJS', 'MongoDB', 'ONNX', 'LLM'],
-			status: 'archived',
+			status: 'archived (2022)',
 			url: 'https://cns.markvasile.org',
-			image: '/cns.jpg'
+			image: '/cns.jpg',
+      kawa: true
 		},
 		{
 			name: 'Champ Forge',
 			description: 'A battle configurator for League of Legends',
 			descriptionKey: 'champforge',
 			technologies: ['Svelte', 'nodeJS', 'MongoDB'],
-			status: 'archived',
+			status: 'archived (2017)',
 			url: 'https://champforge.markvasile.org',
-			image: '/champforge.jpg'
+			image: '/champforge.jpg',
+      kawa: true,
+		},
+		{
+			name: 'Colibri Reporting',
+			description: 'A videographer scheduling, billing, management platform',
+			descriptionKey: 'colibri',
+			technologies: ['vueJS', 'nodeJS', 'MongoDB', 'SQL', 'GCP', 'wkhtmltopdf'],
+			status: 'archived (2012)',
+			url: 'https://colibri.markvasile.org',
+			image: '/colibri.jpg',
+      kawa: true,
 		},
 	];
 	
-	let visibleProjects = $derived(showAllProjects ? toyProjects : toyProjects.slice(0, 3));
-	
-	const toggleProjects = () => {
-		showAllProjects = !showAllProjects;
-	};
 </script>
 
 <section class="section" id="projects">
@@ -136,7 +153,7 @@
 	<p class="section-subtitle">Experimental projects and creative coding experiments</p>
 	
 	<div class="projects-grid">
-		{#each visibleProjects as project}
+		{#each toyProjects as project}
 			<div class="project-card" class:planned={project.status === 'planned'} class:archived={project.status === 'archived'}>
 				{#if project.image}
 					<div class="project-image">
@@ -159,7 +176,14 @@
 					<p class="project-description">
 						{$_('projects.descriptions.' + project.descriptionKey)}
 					</p>
-					
+
+					{#if project.kawa}
+						<div class="project-kawa">
+							<span class="kawa-icon">🪄</span>
+							<span>{$_('projects.kawaRebuilt')}</span>
+						</div>
+					{/if}
+
 					<div class="project-technologies">
 						{#each project.technologies as tech}
 							<span class="tech-tag">{tech}</span>
@@ -181,14 +205,6 @@
 			</div>
 		{/each}
 	</div>
-	
-	{#if toyProjects.length > 3}
-		<div class="projects-toggle">
-			<button class="btn btn-secondary" onclick={toggleProjects}>
-				{showAllProjects ? 'Show Less' : `Show All ${toyProjects.length} Projects`}
-			</button>
-		</div>
-	{/if}
 	
 	<div class="projects-cta">
 		<h3>
@@ -320,6 +336,27 @@
 		line-height: 1.6;
 	}
 	
+	.project-kawa {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.5rem;
+		background: rgba(79, 171, 47, 0.08);
+		border: 1px solid rgba(79, 171, 47, 0.2);
+		border-radius: 10px;
+		padding: 0.6rem 0.85rem;
+		margin-bottom: 1.5rem;
+		font-size: 0.85rem;
+		line-height: 1.4;
+		color: #207360;
+		font-weight: 500;
+	}
+
+	.kawa-icon {
+		flex-shrink: 0;
+		font-size: 1rem;
+		line-height: 1.4;
+	}
+
 	.project-technologies {
 		display: flex;
 		flex-wrap: wrap;
@@ -362,11 +399,6 @@
 		color: #ffc107;
 		font-weight: 500;
 		font-style: italic;
-	}
-	
-	.projects-toggle {
-		text-align: center;
-		margin-bottom: 3rem;
 	}
 	
 	.projects-cta {

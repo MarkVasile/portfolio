@@ -60,7 +60,9 @@
     "collaborationTitle": "コラボレーションに興味がありますか？",
     "collaborationDescription": "新しいプロジェクトに取り組み、革新的なアイデアを探求することに常に興奮しています。一緒に素晴らしいものを作りましょう！",
     "getInTouch": "お問い合わせ",
+    "kawaRebuilt": "Kawa Code を使用して、レガシーコードからモダンなフレームワークへ完全に再構築されたプロジェクト",
     "descriptions": {
+      "listingpr": "不動産業者管理プラットフォーム",
       "speedOfLight": "光の速度電界をシミュレートするプロジェクト",
       "hypercube": "多次元ハイパーキューブでXMASという単語が任意の方向に何回現れるかをカウントする",
       "KawaCode": "AI駆動の開発環境。",
