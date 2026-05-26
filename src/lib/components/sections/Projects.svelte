@@ -108,6 +108,15 @@
 			image: '/shibajimu-dash.jpg'
 		},
 		{
+			name: 'Kanji Multi-Touch (demo)',
+			description: 'An experimental iOS app exploring multi-touch interaction for learning Japanese kanji',
+			descriptionKey: 'kanji-multitouch',
+			technologies: ['iOS', 'Objective-C', 'Xcode', 'Multi-Touch'],
+			status: 'archived (2016)',
+			url: 'https://www.youtube.com/shorts/AaBOtCxChaA',
+			image: 'https://img.youtube.com/vi/AaBOtCxChaA/maxresdefault.jpg',
+		},
+		{
 			name: 'CliqueInStyle wedding planner',
 			description: 'A fashion matcher for your wedding planner',
 			descriptionKey: 'clique-in-style',
