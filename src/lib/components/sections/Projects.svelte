@@ -123,7 +123,7 @@
 			technologies: ['Vue3', 'nodeJS', 'MongoDB', 'ONNX', 'LLM'],
 			status: 'archived (2022)',
 			url: 'https://cns.markvasile.org',
-			image: '/cns.jpg',
+			image: '/cns2.jpg',
       kawa: true
 		},
 		{
@@ -134,6 +134,26 @@
 			status: 'archived (2017)',
 			url: 'https://champforge.markvasile.org',
 			image: '/champforge.jpg',
+      kawa: true,
+		},
+		{
+			name: 'Bitli',
+			description: 'A management platform for IT MSPs',
+			descriptionKey: 'bitli',
+			technologies: ['angularJS', 'nodeJS', 'MongoDB', 'GCP'],
+			status: 'archived (2011)',
+			url: 'https://bitli.markvasile.org',
+			image: '/bitli.jpg',
+      kawa: true,
+		},
+		{
+			name: 'PuddleJump',
+			description: 'A wifi AP placement helper, for large wifi deployments.',
+			descriptionKey: 'puddlejump',
+			technologies: ['angularJS', 'nodeJS', 'MongoDB', 'GCP'],
+			status: 'archived (2017)',
+			url: 'https://puddle.markvasile.org',
+			image: '/puddlejump.jpg',
       kawa: true,
 		},
 		{
