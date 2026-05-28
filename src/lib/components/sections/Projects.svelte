@@ -77,7 +77,6 @@
 			status: 'active (2025)',
 			url: 'https://github.com/MarkVasile/portfolio',
 			image: null,
-      kawa: true,
 		},
 		{
 			name: 'Artist fan-club (archived)',
