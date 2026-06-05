@@ -1,24 +1,19 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { init, locale, getLocaleFromNavigator } from 'svelte-i18n';
-	import { i18nReady } from '../i18n';
-	
-	let isReady = $state(false);
-	
-	onMount(() => {
-		init({
-        initialLocale: getLocaleFromNavigator(), // Or a specific locale like 'en'
-        fallbackLocale: 'en'
-    });
+	import { locale } from 'svelte-i18n';
+	import { i18nReady, setLocale } from '../i18n';
 
+	let isReady = $state(false);
+
+	onMount(() => {
 		const unsubscribe = i18nReady.subscribe(ready => {
 			isReady = ready;
 		});
 		return unsubscribe;
 	});
-	
+
 	const switchLanguage = (newLocale: string) => {
-		locale.set(newLocale);
+		setLocale(newLocale);
 	};
 </script>
 
