@@ -74,25 +74,8 @@
 		</div>
 		
 		<div class="hero-visual">
-			<div class="code-block">
-				<div class="code-line">
-					<span class="keyword">const</span> 
-					<span class="variable">developer</span> 
-					<span class="operator">=</span> 
-					<span class="string">'Mark Vasile'</span>;
-				</div>
-				<div class="code-line">
-					<span class="keyword">const</span> 
-					<span class="variable">passion</span> 
-					<span class="operator">=</span> 
-					<span class="string">'Work better with people'</span>;
-				</div>
-				<div class="code-line">
-					<span class="keyword">const</span> 
-					<span class="variable">mission</span> 
-					<span class="operator">=</span> 
-					<span class="function">solveProblems</span><span class="variable">(passion)</span>;
-				</div>
+			<div class="hero-photo-wrap">
+        <img class="hero-photo" src="/me-at-starbucks.jpg" alt="Mark Vasile" />
 			</div>
 		</div>
 	</div>
@@ -160,16 +143,42 @@
 		justify-content: center;
 		align-items: center;
 	}
-	
+
+	.hero-photo-wrap {
+		position: relative;
+		width: 100%;
+		max-width: 460px;
+		/* room for the card to hang below the photo edge */
+		margin-bottom: 1.5rem;
+	}
+
+	.hero-photo {
+		display: block;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 4 / 5;
+		object-fit: cover;
+		border-radius: 16px;
+		box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
+	}
+
 	.code-block {
-		background: #000000;
-		border-radius: 10px;
-		padding: 2rem;
+		position: absolute;
+		left: 50%;
+		bottom: -1.5rem;
+		transform: translateX(-50%);
+		width: 88%;
+		box-sizing: border-box;
+		background: rgba(10, 10, 10, 0.82);
+		-webkit-backdrop-filter: blur(6px);
+		backdrop-filter: blur(6px);
+		border-radius: 12px;
+		padding: 1.5rem;
 		font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-		font-size: 1rem;
+		font-size: 0.95rem;
 		line-height: 1.8;
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-		border: 1px solid #333;
+		box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+		border: 1px solid rgba(255, 255, 255, 0.12);
 	}
 	
 	.code-line {
