@@ -99,6 +99,13 @@
 						About
 					{/if}
 				</a>
+				<a href="#patents">
+					{#if isReady}
+						{$_('contact.footer.sections.patents')}
+					{:else}
+						Patents
+					{/if}
+				</a>
 				<a href="#blogs">
 					{#if isReady}
 						{$_('contact.footer.sections.blogs')}

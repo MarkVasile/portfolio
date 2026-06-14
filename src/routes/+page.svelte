@@ -4,6 +4,7 @@
 	import { initializeI18n } from '../lib/i18n';
 	import Hero from '$lib/components/sections/Hero.svelte';
 	import About from '$lib/components/sections/About.svelte';
+	import Patents from '$lib/components/sections/Patents.svelte';
 	import Blogs from '$lib/components/sections/Blogs.svelte';
 	import Projects from '$lib/components/sections/Projects.svelte';
 	import Contact from '$lib/components/sections/Contact.svelte';
@@ -24,6 +25,7 @@
 <main>
 	<Hero />
 	<About />
+	<Patents />
 	<Projects />
 	<Blogs />
 	<Contact />

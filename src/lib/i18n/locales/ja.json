@@ -33,6 +33,22 @@
     "viewRepo": "リポジトリを見る",
     "other": "その他"
   },
+  "patents": {
+    "title": "特許",
+    "subtitle": "発明者または共同発明者として登録された特許",
+    "items": {
+      "emfDesign": "電磁波分布の可視化と、エミッタの最適配置のための協働型Webベース設計システム",
+      "devSupport": "低ノイズ・コラボレーションシステム"
+    },
+    "roles": {
+      "inventor": "発明者",
+      "coInventor": "共同発明者"
+    },
+    "grants": {
+      "usGrant": "2019年10月22日 登録",
+      "jpGrant": "2022年10月7日 登録"
+    }
+  },
   "blogs": {
     "title": "執筆とブログ",
     "subtitle": "様々なプラットフォームでの執筆をフォロー",
@@ -97,6 +113,7 @@
       "sections": {
         "about": "について",
         "github": "GitHub",
+        "patents": "特許",
         "blogs": "ブログ",
         "projects": "プロジェクト",
         "contact": "お問い合わせ"
@@ -106,6 +123,7 @@
   "navigation": {
     "about": "について",
     "github": "GitHub",
+    "patents": "特許",
     "blogs": "ブログ",
     "projects": "プロジェクト",
     "contact": "お問い合わせ"

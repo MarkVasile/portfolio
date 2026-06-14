@@ -33,6 +33,22 @@
     "viewRepo": "View Repository",
     "other": "Other"
   },
+  "patents": {
+    "title": "Patents",
+    "subtitle": "Granted patents I authored or co-authored",
+    "items": {
+      "emfDesign": "System for visualization of electromagnetic wave distribution and collaborative web-based design for optimal distribution of emitters",
+      "devSupport": "Low noise collaboration system"
+    },
+    "roles": {
+      "inventor": "Inventor",
+      "coInventor": "Co-inventor"
+    },
+    "grants": {
+      "usGrant": "Granted Oct 22, 2019",
+      "jpGrant": "Granted Oct 7, 2022"
+    }
+  },
   "blogs": {
     "title": "Writing & Blog",
     "subtitle": "Follow my writing across different platforms",
@@ -95,6 +111,7 @@
       "sections": {
         "about": "About",
         "github": "GitHub",
+        "patents": "Patents",
         "blogs": "Blogs",
         "projects": "Projects",
         "contact": "Contact"
@@ -104,6 +121,7 @@
   "navigation": {
     "about": "About",
     "github": "GitHub",
+    "patents": "Patents",
     "blogs": "Blogs",
     "projects": "Projects",
     "contact": "Contact"
