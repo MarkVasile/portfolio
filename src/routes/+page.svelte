@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { _, waitLocale } from 'svelte-i18n';
-	import { initializeI18n } from '../lib/i18n';
+	import '../lib/i18n';
 	import Hero from '$lib/components/sections/Hero.svelte';
 	import About from '$lib/components/sections/About.svelte';
 	import Patents from '$lib/components/sections/Patents.svelte';
@@ -9,23 +7,13 @@
 	import Projects from '$lib/components/sections/Projects.svelte';
 	import Contact from '$lib/components/sections/Contact.svelte';
 	import Navigation from '$lib/components/Navigation.svelte';
-	
-	onMount(async () => {
-		// Ensure i18n is initialized
-		await waitLocale();
-		await initializeI18n();
-	});
 </script>
-
-<svelte:head>
-	<title>Mark Vasile - Software Engineer</title>
-</svelte:head>
 
 <Navigation />
 <main>
 	<Hero />
-	<About />
 	<Patents />
+	<About />
 	<Projects />
 	<Blogs />
 	<Contact />

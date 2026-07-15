@@ -1,28 +1,15 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { _, waitLocale } from 'svelte-i18n';
-	import { i18nReady } from '../../i18n';
-
-	let isReady = $state(false);
-
-	onMount(() => {
-		const unsubscribe = i18nReady.subscribe(ready => {
-			isReady = ready;
-		});
-		return unsubscribe;
-	});
+	import { _ } from 'svelte-i18n';
 
 	const patents = [
 		{
 			flag: '🇺🇸',
 			office: 'United States Patent & Trademark Office',
 			number: 'US 10,454,599 B2',
-			title: 'System for visualization of electromagnetic wave distribution and collaborative web-based design for optimal distribution of emitters',
 			titleKey: 'emfDesign',
-			role: 'co-inventor',
 			roleKey: 'coInventor',
-			grantDate: 'Granted Oct 22, 2019',
 			grantDateKey: 'usGrant',
+			relevanceKey: 'emfRelevance',
 			links: [
 				{ label: 'Google Patents', url: 'https://patents.google.com/patent/US10454599B2/en' }
 			]
@@ -31,12 +18,10 @@
 			flag: '🇯🇵',
 			office: 'Japan Patent Office (特許庁)',
 			number: 'JP 7150002 B2',
-			title: 'Low noise collaboration system',
 			titleKey: 'devSupport',
-			role: 'inventor',
 			roleKey: 'inventor',
-			grantDate: 'Granted Oct 7, 2022',
 			grantDateKey: 'jpGrant',
+			relevanceKey: 'devRelevance',
 			links: [
 				{ label: 'J-PlatPat', url: 'https://www.j-platpat.inpit.go.jp/c1801/PU/JP-2020-219816/10/ja' },
 				{ label: 'English translation', url: 'https://patents.google.com/patent/JP2022104700A/en' }
@@ -46,13 +31,8 @@
 </script>
 
 <section class="section" id="patents">
-	{#await waitLocale() then}
-	<h2 class="section-title">
-		{#if isReady}{$_('patents.title')}{:else}Patents{/if}
-	</h2>
-	<p class="section-subtitle">
-		{#if isReady}{$_('patents.subtitle')}{:else}Granted patents I authored or co-authored{/if}
-	</p>
+	<h2 class="section-title">{$_('patents.title')}</h2>
+	<p class="section-subtitle">{$_('patents.subtitle')}</p>
 
 	<div class="patents-grid">
 		{#each patents as patent}
@@ -65,17 +45,13 @@
 					</div>
 				</div>
 
-				<h3 class="patent-title">
-					{#if isReady}{$_('patents.items.' + patent.titleKey)}{:else}{patent.title}{/if}
-				</h3>
+				<h3 class="patent-title">{$_('patents.items.' + patent.titleKey)}</h3>
+
+				<p class="patent-relevance">{$_('patents.relevance.' + patent.relevanceKey)}</p>
 
 				<div class="patent-badges">
-					<span class="patent-badge role">
-						{#if isReady}{$_('patents.roles.' + patent.roleKey)}{:else}{patent.role}{/if}
-					</span>
-					<span class="patent-badge date">
-						{#if isReady}{$_('patents.grants.' + patent.grantDateKey)}{:else}{patent.grantDate}{/if}
-					</span>
+					<span class="patent-badge role">{$_('patents.roles.' + patent.roleKey)}</span>
+					<span class="patent-badge date">{$_('patents.grants.' + patent.grantDateKey)}</span>
 				</div>
 
 				<div class="patent-links">
@@ -88,7 +64,6 @@
 			</article>
 		{/each}
 	</div>
-	{/await}
 </section>
 
 <style>
@@ -152,6 +127,13 @@
 		color: #000;
 		margin: 0;
 		line-height: 1.4;
+	}
+
+	.patent-relevance {
+		font-size: 0.92rem;
+		color: #555;
+		margin: 0;
+		line-height: 1.5;
 	}
 
 	.patent-badges {

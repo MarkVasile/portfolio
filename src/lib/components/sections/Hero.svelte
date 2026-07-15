@@ -1,85 +1,37 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { _, waitLocale } from 'svelte-i18n';
-	import { i18nReady } from '../../i18n';
-	
-	let isReady = false;
-	
-	onMount(() => {
-		const unsubscribe = i18nReady.subscribe(ready => {
-			isReady = ready;
-		});
-		return unsubscribe;
-	});
-	
+	import { _ } from 'svelte-i18n';
+
 	const scrollToSection = (sectionId: string) => {
-		const element = document.getElementById(sectionId);
-		if (element) {
-			element.scrollIntoView({ behavior: 'smooth' });
-		}
-	};
-	
-	// Fallback text
-	const heroText = {
-		title: 'Mark Vasile',
-		subtitle: 'Software Engineer',
-		description: 'Building innovative solutions and exploring the intersection of technology and creativity.',
-		cta: 'Explore My Work',
-		contact: 'Contact'
+		document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
 	};
 </script>
 
 <section class="hero" id="hero">
-	{#await waitLocale() then}
 	<div class="hero-container">
 		<div class="hero-content">
-			<h1 class="hero-title">
-				{#if isReady}
-					{$_('hero.title')}
-				{:else}
-					{heroText.title}
-				{/if}
-			</h1>
-			<h2 class="hero-subtitle">
-				{#if isReady}
-					{$_('hero.subtitle')}
-				{:else}
-					{heroText.subtitle}
-				{/if}
-			</h2>
-			<p class="hero-description">
-				{#if isReady}
-					{$_('hero.description')}
-				{:else}
-					{heroText.description}
-				{/if}
-			</p>
-			
+			<h1 class="hero-title">{$_('hero.title')}</h1>
+			<h2 class="hero-subtitle">{$_('hero.subtitle')}</h2>
+			<p class="hero-description">{$_('hero.description')}</p>
+
 			<div class="hero-actions">
-				<button class="btn" on:click={() => scrollToSection('projects')}>
-					{#if isReady}
-						{$_('hero.cta')}
-					{:else}
-						{heroText.cta}
-					{/if}
+				<button class="btn" onclick={() => scrollToSection('projects')}>
+					{$_('hero.cta')}
 				</button>
-				<button class="btn btn-secondary" on:click={() => scrollToSection('contact')}>
-					{#if isReady}
-						{$_('contact.title')}
-					{:else}
-						{heroText.contact}
-					{/if}
+				<a class="btn btn-secondary" href="/Mark-Vasile-Resume.pdf" target="_blank" rel="noopener noreferrer">
+					{$_('hero.downloadCv')}
+				</a>
+				<button class="btn btn-secondary" onclick={() => scrollToSection('contact')}>
+					{$_('contact.title')}
 				</button>
 			</div>
 		</div>
-		
+
 		<div class="hero-visual">
 			<div class="hero-photo-wrap">
-        <img class="hero-photo" src="/me-at-starbucks.jpg" alt="Mark Vasile" />
+				<img class="hero-photo" src="/me-at-starbucks.jpg" alt="Mark Vasile" />
 			</div>
 		</div>
 	</div>
-	{/await}
 	<div class="scroll-indicator">
 		<div class="scroll-arrow"></div>
 	</div>
@@ -162,50 +114,6 @@
 		box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
 	}
 
-	.code-block {
-		position: absolute;
-		left: 50%;
-		bottom: -1.5rem;
-		transform: translateX(-50%);
-		width: 88%;
-		box-sizing: border-box;
-		background: rgba(10, 10, 10, 0.82);
-		-webkit-backdrop-filter: blur(6px);
-		backdrop-filter: blur(6px);
-		border-radius: 12px;
-		padding: 1.5rem;
-		font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-		font-size: 0.95rem;
-		line-height: 1.8;
-		box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
-		border: 1px solid rgba(255, 255, 255, 0.12);
-	}
-	
-	.code-line {
-		margin-bottom: 0.5rem;
-	}
-	
-	.keyword {
-		color: #ff6b6b;
-		font-weight: bold;
-	}
-	
-	.variable {
-		color: #4ecdc4;
-	}
-	
-	.operator {
-		color: #ffe66d;
-	}
-	
-	.string {
-		color: #95e1d3;
-	}
-	
-	.function {
-		color: #a8e6cf;
-	}
-	
 	.scroll-indicator {
 		position: absolute;
 		bottom: 2rem;
@@ -255,11 +163,6 @@
 		
 		.hero-actions {
 			justify-content: center;
-		}
-		
-		.code-block {
-			padding: 1.5rem;
-			font-size: 0.9rem;
 		}
 	}
 </style>

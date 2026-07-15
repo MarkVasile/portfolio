@@ -13,9 +13,6 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Mark Vasile - Software Engineer</title>
-	<meta name="description" content="Software Engineer specializing in full-stack development, AI integration, and system architecture." />
 </svelte:head>
 
 {@render children?.()}

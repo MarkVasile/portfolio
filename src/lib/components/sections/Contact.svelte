@@ -1,70 +1,70 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { _, locale, waitLocale } from 'svelte-i18n';
-	import { i18nReady } from '../../i18n';
-	
-	let isReady = $state(false);
-	
-	onMount(() => {
-		const unsubscribe = i18nReady.subscribe(ready => {
-			isReady = ready;
-		});
-		return unsubscribe;
-	});
-	
+	import { _ } from 'svelte-i18n';
+
+	const email = 'mark@kawacode.ai';
+
+	// For a government / enterprise evaluation audience, keep the professional set
+	// only: LinkedIn, GitHub, and email. Personal social accounts are omitted.
 	const socialLinks = [
 		{
 			name: 'LinkedIn',
-			url: 'https://linkedin.com/in/markvasile',
+			url: 'https://www.linkedin.com/in/markvasile',
 			icon: '💼',
 			color: '#0077b5'
 		},
 		{
-			name: 'X (Twitter)',
-			url: 'https://x.com/markvasile',
-			icon: '🐦',
-			color: '#1da1f2'
+			name: 'GitHub',
+			url: 'https://github.com/MarkVasile',
+			icon: '💻',
+			color: '#171515'
 		},
 		{
-			name: 'Facebook',
-			url: 'https://facebook.com/marian.vasile',
-			icon: '📘',
-			color: '#1877f2'
-		},
-		{
-			name: 'Instagram',
-			url: 'https://instagram.com/markvasile',
-			icon: '📷',
-			color: '#e4405f'
+			name: 'Email',
+			url: `mailto:${email}`,
+			icon: '✉️',
+			color: '#207360'
 		}
 	];
-	
-	const copyEmail = () => {
-		navigator.clipboard.writeText('mark@markvasile.com');
-		// You could add a toast notification here
+
+	let copied = $state(false);
+	const copyEmail = async () => {
+		try {
+			await navigator.clipboard.writeText(email);
+			copied = true;
+			setTimeout(() => (copied = false), 2000);
+		} catch {
+			/* clipboard unavailable */
+		}
 	};
 </script>
 
 <section class="section" id="contact">
-	{#await waitLocale() then}
-	<h2 class="section-title">Get In Touch</h2>
-	
+	<h2 class="section-title">{$_('contact.title')}</h2>
+
 	<div class="contact-cta">
 		<div class="cta-content">
-			<h3>
-				{#if isReady}
-					{$_('contact.buildTogetherTitle')}
-				{:else}
-					Let's Build Something Amazing Together
-				{/if}
-			</h3>
-			<p>
-				{#if isReady}
-					{$_('contact.buildTogetherDescription')}
-				{:else}
-					Whether you're looking for a software engineer, want to collaborate on a project, or just want to chat about technology, I'd love to hear from you!
-				{/if}
-			</p>
+			<h3>{$_('contact.buildTogetherTitle')}</h3>
+			<p>{$_('contact.buildTogetherDescription')}</p>
+			<div class="email-row">
+				<a class="email-address" href={`mailto:${email}`}>{email}</a>
+				<button class="btn btn-secondary email-copy" onclick={copyEmail}>
+					{copied ? $_('contact.copied') : $_('contact.copyEmail')}
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="documents">
+		<h3>{$_('contact.documentsTitle')}</h3>
+		<div class="documents-grid">
+			<a class="doc-link" href="/Mark-Vasile-Resume.pdf" target="_blank" rel="noopener noreferrer">
+				<span class="doc-icon" aria-hidden="true">📄</span>
+				<span>{$_('contact.downloadCv')}</span>
+			</a>
+			<a class="doc-link" href="/Code-Awareness-LLC-Capability-Statement.pdf" target="_blank" rel="noopener noreferrer">
+				<span class="doc-icon" aria-hidden="true">📄</span>
+				<span>{$_('contact.capabilityStatement')}</span>
+			</a>
 		</div>
 	</div>
 
@@ -82,8 +82,8 @@
 			</div>
 		</div>
 	</div>
-	
-	
+
+
 	<footer class="footer">
 		<div class="footer-content">
 			<div class="footer-logo">
@@ -92,63 +92,26 @@
 			</div>
 			
 			<div class="footer-links">
-				<a href="#about">
-					{#if isReady}
-						{$_('contact.footer.sections.about')}
-					{:else}
-						About
-					{/if}
-				</a>
-				<a href="#patents">
-					{#if isReady}
-						{$_('contact.footer.sections.patents')}
-					{:else}
-						Patents
-					{/if}
-				</a>
-				<a href="#blogs">
-					{#if isReady}
-						{$_('contact.footer.sections.blogs')}
-					{:else}
-						Blogs
-					{/if}
-				</a>
-				<a href="#projects">
-					{#if isReady}
-						{$_('contact.footer.sections.projects')}
-					{:else}
-						Projects
-					{/if}
-				</a>
-				<a href="#contact">
-					{#if isReady}
-						{$_('contact.footer.sections.contact')}
-					{:else}
-						Contact
-					{/if}
-				</a>
+				<a href="#patents">{$_('contact.footer.sections.patents')}</a>
+				<a href="#about">{$_('contact.footer.sections.about')}</a>
+				<a href="#projects">{$_('contact.footer.sections.projects')}</a>
+				<a href="#blogs">{$_('contact.footer.sections.blogs')}</a>
+				<a href="#contact">{$_('contact.footer.sections.contact')}</a>
 			</div>
-			
+
 			<div class="footer-social">
 				{#each socialLinks as social}
-					<a href={social.url} target="_blank" rel="noopener noreferrer" class="footer-social-link">
+					<a href={social.url} target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label={social.name}>
 						{social.icon}
 					</a>
 				{/each}
 			</div>
 		</div>
-		
+
 		<div class="footer-bottom">
-			<p>
-				{#if isReady}
-					{$_('contact.footer.builtWith')}
-				{:else}
-					Built with ❤️ using Svelte
-				{/if}
-			</p>
+			<p>{$_('contact.footer.builtWith')}</p>
 		</div>
 	</footer>
-	{/await}
 </section>
 
 <style>
@@ -160,57 +123,81 @@
 		margin-bottom: 4rem;
 	}
 	
-	.contact-info {
-		display: flex;
-		flex-direction: column;
-		gap: 2rem;
-	}
-	
-	.contact-card {
-		background: white;
-		border: 1px solid #e0e0e0;
-		border-radius: 15px;
-		padding: 2rem;
-		text-align: center;
-		transition: all 0.3s ease;
-		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-	}
-	
-	.contact-card:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 15px 35px rgba(79, 171, 47, 0.15);
-	}
-	
-	.contact-icon {
-		font-size: 3rem;
-		margin-bottom: 1rem;
-	}
-	
-	.contact-card h3 {
-		font-size: 1.3rem;
-		font-weight: 600;
-		color: #000000;
-		margin-bottom: 0.5rem;
-	}
-	
-	.contact-card p {
-		color: #666;
-		margin-bottom: 1.5rem;
-		font-size: 1.1rem;
-	}
-	
-	.social-section h3 {
-		font-size: 1.8rem;
-		font-weight: 600;
-		color: #000000;
-		margin-bottom: 2rem;
-		text-align: center;
-	}
-	
 	.social-grid {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		gap: 1.5rem;
+		max-width: 720px;
+		margin: 0 auto;
+	}
+
+	.email-row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-top: 1.5rem;
+	}
+
+	.email-address {
+		font-size: 1.2rem;
+		font-weight: 600;
+		color: #207360;
+		text-decoration: none;
+	}
+
+	.email-address:hover {
+		text-decoration: underline;
+	}
+
+	.email-copy {
+		padding: 0.5rem 1rem;
+		font-size: 0.9rem;
+	}
+
+	.documents {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.documents h3 {
+		font-size: 1.4rem;
+		font-weight: 600;
+		color: #000000;
+		margin-bottom: 1.5rem;
+	}
+
+	.documents-grid {
+		display: flex;
+		gap: 1.5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.doc-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.6rem;
+		padding: 0.85rem 1.4rem;
+		background: white;
+		border: 2px solid #4fab2f;
+		border-radius: 12px;
+		text-decoration: none;
+		color: #207360;
+		font-weight: 600;
+		transition: all 0.3s ease;
+	}
+
+	.doc-link:hover {
+		background: #4fab2f;
+		color: white;
+		transform: translateY(-3px);
+		box-shadow: 0 10px 25px rgba(79, 171, 47, 0.2);
+	}
+
+	.doc-icon {
+		font-size: 1.2rem;
 	}
 	
 	.social-link {
@@ -275,13 +262,6 @@
 		color: #666;
 		margin-bottom: 2rem;
 		line-height: 1.6;
-	}
-	
-	.cta-actions {
-		display: flex;
-		gap: 1rem;
-		justify-content: center;
-		flex-wrap: wrap;
 	}
 	
 	.footer {
@@ -392,16 +372,6 @@
 		
 		.footer-social {
 			justify-content: center;
-		}
-		
-		.cta-actions {
-			flex-direction: column;
-			align-items: center;
-		}
-		
-		.cta-actions .btn {
-			width: 100%;
-			max-width: 300px;
 		}
 	}
 </style>

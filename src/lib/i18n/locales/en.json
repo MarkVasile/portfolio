@@ -1,32 +1,42 @@
 {
   "hero": {
     "title": "Mark Vasile",
-    "subtitle": "Software Engineer",
-    "description": "Building innovative solutions and exploring the intersection of technology and creativity.",
-    "cta": "Explore My Work"
+    "subtitle": "Senior Software Engineer & Independent Contractor",
+    "description": "Senior software engineer and independent contractor with 25+ years designing, building, and maintaining reliable production systems — from Rust and Node.js back ends to modern web and mobile front ends.",
+    "cta": "View My Work",
+    "downloadCv": "Download CV"
   },
   "about": {
-    "title": "About Me",
-    "description": "I'm a passionate software engineer with expertise in full-stack development, AI integration, and system architecture. I love building tools that solve real-world problems and exploring new technologies.",
+    "title": "About",
+    "description": "I build dependable software and keep it running. Over 25+ years I've delivered production systems end to end for clients across real estate, education, IT services, and other industries — working independently under the CodeAwareness name. My focus is reliability: systems that ship, stay in service, and remain maintainable by the teams that inherit them.",
     "skills": "Skills & Technologies",
     "focus": "Current Focus",
     "focusItems": {
-      "aiTools": "AI-enabled Development Tools",
-      "codeIntelligence": "Code Intelligence and Analytics",
-      "productivity": "Productivity and Collaboration solutions",
-      "openSource": "Participating in Open Source Projects"
+      "aiTools": "AI-enabled development tools",
+      "codeIntelligence": "Code intelligence and analytics",
+      "productivity": "Productivity and collaboration systems",
+      "openSource": "Open-source contributions"
     },
     "stats": {
-      "yearsExperience": "Years Experience",
-      "projectsCompleted": "Projects Completed",
-      "technologies": "Technologies",
-      "passionForCode": "Passion for Code",
-      "continents": "Continents"
+      "yearsExperience": "Years delivering software",
+      "patents": "Granted patents (US & Japan)",
+      "systemsDelivered": "Systems designed & delivered",
+      "industries": "Industries served"
+    },
+    "aiWorkflow": {
+      "title": "How I Work with AI",
+      "description": "I treat AI coding agents like any other powerful tool — under strict engineering discipline. Every change starts from a tracked intent with its rationale recorded, I favor root-cause diagnosis over quick patches, and I keep commits clean and isolated while coordinating work across several repositories at once. The result is high throughput without giving up the reliability my clients depend on.",
+      "principles": {
+        "intent": "Intent-tracked changes with recorded design decisions",
+        "rootCause": "Root-cause diagnosis over surface fixes",
+        "commits": "Clean, isolated commits and a reviewable history",
+        "multiRepo": "Coordinated delivery across multiple repositories"
+      }
     }
   },
   "github": {
-    "title": "GitHub Portfolio",
-    "subtitle": "Explore my open source contributions and projects",
+    "title": "GitHub",
+    "subtitle": "Open-source contributions and projects",
     "personal": "Personal Projects",
     "codeawareness": "CodeAwareness",
     "viewProfile": "View Profile",
@@ -35,10 +45,14 @@
   },
   "patents": {
     "title": "Patents",
-    "subtitle": "Granted patents I authored or co-authored",
+    "subtitle": "Independent, third-party validation of my work — two granted patents at the United States and Japan patent offices.",
     "items": {
       "emfDesign": "System for visualization of electromagnetic wave distribution and collaborative web-based design for optimal distribution of emitters",
-      "devSupport": "Low noise collaboration system"
+      "devSupport": "Low-noise collaboration system"
+    },
+    "relevance": {
+      "emfRelevance": "Web-based visualization and collaborative optimization of electromagnetic-emitter placement — relevant to RF planning, antenna and sensor siting, and telecom and defense coverage design.",
+      "devRelevance": "A low-noise, privacy-preserving system for real-time collaboration across teams and tools — the foundation of the CodeAwareness developer platform."
     },
     "roles": {
       "inventor": "Inventor",
@@ -50,70 +64,67 @@
     }
   },
   "blogs": {
-    "title": "Writing & Blog",
-    "subtitle": "Follow my writing across different platforms",
-    "medium": "Medium Articles",
-    "substack": "Substack Newsletter",
-    "ghost": "Ghost Blog",
+    "title": "Writing",
+    "subtitle": "Notes on software engineering, systems, and developer tooling.",
     "readMore": "Read More",
-    "recentArticles": "Recent Articles",
-    "newsletterTopics": "Newsletter Topics",
-    "technicalContent": "Technical Content",
-    "ctaDescription": "Stay updated with my latest posts on software development, AI, and technology trends."
+    "descriptions": {
+      "medium": "Technical articles on software development and engineering practice.",
+      "substack": "The CodeAwareness newsletter — updates on the platform and developer tooling.",
+      "ghost": "Longer-form technical writing and tutorials."
+    }
   },
   "projects": {
-    "title": "Past Projects",
-    "subtitle": "Experimental projects and creative coding experiments",
+    "title": "Selected Work",
+    "subtitle": "Production systems and applications I've designed, built, and delivered — client platforms, developer tools, and open-source work.",
     "comingSoon": "Coming Soon",
     "viewProject": "View Project",
     "active": "Active",
-    "planned": "Planned",
     "archived": "Archived",
-    "showLess": "Show Less",
-    "showAll": "Show All {count} Projects",
-    "collaborationTitle": "Interested in Collaboration?",
-    "collaborationDescription": "I'm always excited to work on new projects and explore innovative ideas. Let's build something amazing together!",
-    "getInTouch": "Get In Touch",
-    "kawaRebuilt": "Project completely rebuilt from legacy code to modern frameworks, using Kawa Code",
+    "since": "Active since",
+    "delivered": "Delivered",
+    "collaborationTitle": "Available for New Engagements",
+    "collaborationDescription": "I take on contract and consulting work — building new systems, modernizing legacy code, and integrating AI into existing products. If you have a project in mind, I'd be glad to talk.",
+    "getInTouch": "Get in Touch",
+    "kawaRebuilt": "Rebuilt from legacy code into a modern framework as a live demo, using Kawa Code.",
     "descriptions": {
-      "listingpr": "A realtor management platform",
-      "speedOfLight": "A project to simulate the speed of light electric field",
-      "hypercube": "Count the number of times the word XMAS shows up in any direction in a multi-dimensional hypercube",
+      "listingpr": "A management platform for real-estate agents.",
+      "speedOfLight": "A simulation and visualization of an electric field propagating at the speed of light through a medium.",
+      "hypercube": "A solver that counts occurrences of the word XMAS in every direction across a multi-dimensional hypercube.",
       "KawaCode": "AI-powered development platform.",
-      "mongoAlias": "A lightweight aliasing layer on top of mongodb node driver",
-      "emacsPackage": "Emacs package for Code Awareness",
-      "portfolio": "My portfolio website",
-      "lisa": "A community for fans of the Japanese artist Lisa to translate articles in various languages",
-      "shibajimu-web": "A courseware and mentorship web+mobile platform built from scratch for one of my Japanese clients.",
-      "shibajimu-dash": "Admin Dashboard for Shibajimu Academy",
-      "clique-in-style": "A fashion matcher for your wedding planner, web and mobile (tablet).",
-      "kanji-multitouch": "An experimental iOS app exploring multi-touch interaction for learning Japanese kanji."
+      "mongoAlias": "A lightweight aliasing layer on top of the MongoDB Node.js driver.",
+      "emacsPackage": "Emacs package for the Code Awareness platform.",
+      "portfolio": "This portfolio website — server-prerendered SvelteKit with bilingual support.",
+      "lisa": "A fan community for the Japanese artist Lisa, translating articles into multiple languages.",
+      "shibajimu-web": "A courseware and mentorship platform, web and mobile, built from scratch for a Japanese client.",
+      "shibajimu-dash": "The administration dashboard for the Shibajimu mentorship academy.",
+      "clique-in-style": "A fashion-matching tool for wedding planners, on web and tablet.",
+      "kanji-multitouch": "An experimental iOS app exploring multi-touch interaction for learning Japanese kanji.",
+      "champforge": "A battle configurator for League of Legends.",
+      "bitli": "A management platform for IT managed-service providers.",
+      "puddlejump": "A Wi-Fi access-point placement tool for large wireless deployments.",
+      "colibri": "A scheduling, billing, and management platform for videographers."
     }
   },
   "contact": {
-    "title": "Get In Touch",
-    "subtitle": "Let's connect and discuss opportunities, collaborations, or just have a chat about technology.",
-    "email": "Email Me",
-    "emailTitle": "Email Me",
-    "social": "Follow Me",
-    "socialTitle": "Follow Me",
-    "website": "Website",
-    "websiteTitle": "Website",
+    "title": "Get in Touch",
+    "subtitle": "Let's connect to discuss a project, an engagement, or how I can help.",
+    "email": "Email",
     "copyEmail": "Copy Email",
-    "visitSite": "Visit Site",
-    "sendEmail": "Send Email",
-    "connectLinkedIn": "Connect on LinkedIn",
-    "buildTogetherTitle": "Let's Build Something Amazing Together",
-    "buildTogetherDescription": "Whether you're looking for a software engineer, want to collaborate on a project, or just want to chat about technology, I'd love to hear from you!",
+    "copied": "Copied!",
+    "documentsTitle": "Documents",
+    "downloadCv": "Download CV (PDF)",
+    "capabilityStatement": "Capability Statement (PDF)",
+    "buildTogetherTitle": "Let's Talk About Your Project",
+    "buildTogetherDescription": "Whether you need a system built from scratch, a legacy application modernized, or AI integrated into an existing product, I'd be glad to discuss how I can help.",
     "footer": {
       "rightsReserved": "All rights reserved.",
-      "builtWith": "Built with ❤️ using Svelte",
+      "builtWith": "© 2025 Mark Vasile · Built with SvelteKit",
       "sections": {
         "about": "About",
         "github": "GitHub",
         "patents": "Patents",
-        "blogs": "Blogs",
-        "projects": "Projects",
+        "blogs": "Writing",
+        "projects": "Work",
         "contact": "Contact"
       }
     }
@@ -122,8 +133,8 @@
     "about": "About",
     "github": "GitHub",
     "patents": "Patents",
-    "blogs": "Blogs",
-    "projects": "Projects",
+    "blogs": "Writing",
+    "projects": "Work",
     "contact": "Contact"
   },
   "common": {

@@ -1,35 +1,12 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { _, waitLocale } from 'svelte-i18n';
-	import { i18nReady } from '../i18n';
+	import { _ } from 'svelte-i18n';
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
-	
-	let isReady = $state(false);
+
 	let mobileMenuOpen = $state(false);
 
-	onMount(() => {
-		const unsubscribe = i18nReady.subscribe(ready => {
-			isReady = ready;
-		});
-		return unsubscribe;
-	});
-
 	const scrollToSection = (sectionId: string) => {
-		const element = document.getElementById(sectionId);
-		if (element) {
-			element.scrollIntoView({ behavior: 'smooth' });
-		}
+		document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
 		mobileMenuOpen = false;
-	};
-	
-	// Navigation text with fallbacks
-	const navText = {
-		about: 'About',
-		github: 'GitHub',
-		patents: 'Patents',
-		blogs: 'Blogs',
-		projects: 'Projects',
-		contact: 'Contact'
 	};
 </script>
 
@@ -40,45 +17,23 @@
 			<span>Mark Vasile</span>
 		</div>
 		
-		{#await waitLocale() then}
 		<div class="nav-links" class:open={mobileMenuOpen}>
-			<button onclick={() => scrollToSection('about')} class="nav-link">
-				{#if isReady}
-					{$_('navigation.about')}
-				{:else}
-					{navText.about}
-				{/if}
-			</button>
 			<button onclick={() => scrollToSection('patents')} class="nav-link">
-				{#if isReady}
-					{$_('navigation.patents')}
-				{:else}
-					{navText.patents}
-				{/if}
+				{$_('navigation.patents')}
 			</button>
-			<button onclick={() => scrollToSection('blogs')} class="nav-link">
-				{#if isReady}
-					{$_('navigation.blogs')}
-				{:else}
-					{navText.blogs}
-				{/if}
+			<button onclick={() => scrollToSection('about')} class="nav-link">
+				{$_('navigation.about')}
 			</button>
 			<button onclick={() => scrollToSection('projects')} class="nav-link">
-				{#if isReady}
-					{$_('navigation.projects')}
-				{:else}
-					{navText.projects}
-				{/if}
+				{$_('navigation.projects')}
+			</button>
+			<button onclick={() => scrollToSection('blogs')} class="nav-link">
+				{$_('navigation.blogs')}
 			</button>
 			<button onclick={() => scrollToSection('contact')} class="nav-link">
-				{#if isReady}
-					{$_('navigation.contact')}
-				{:else}
-					{navText.contact}
-				{/if}
+				{$_('navigation.contact')}
 			</button>
 		</div>
-		{/await}
 		
 		<div class="nav-right">
 			<LanguageSwitcher />

@@ -1,16 +1,22 @@
 import { browser } from '$app/environment';
-import { init, register, waitLocale, locale } from 'svelte-i18n';
+import { init, addMessages, waitLocale, locale } from 'svelte-i18n';
 import { writable } from 'svelte/store';
+import en from './locales/en.json';
+import ja from './locales/ja.json';
 
 const defaultLocale = 'en';
 const supportedLocales = ['en', 'ja'];
 const STORAGE_KEY = 'preferred-locale';
 
-register('en', () => import('./locales/en.json'));
-register('ja', () => import('./locales/ja.json'));
+// Bundle both dictionaries synchronously so translations are available during
+// server-side prerendering (crawlable HTML) and on first client paint, with no
+// async loading flash. The catalogs are small, so the bundle cost is negligible.
+addMessages('en', en);
+addMessages('ja', ja);
 
 // Decide which language to show: a previously saved manual choice wins,
 // otherwise fall back to the browser's preferred languages, then to English.
+// On the server (prerender) there is no browser, so we always emit English.
 function detectLocale(): string {
 	if (!browser) return defaultLocale;
 
@@ -38,10 +44,13 @@ if (browser) {
 	});
 }
 
-// Create a store to track if i18n is ready
-export const i18nReady = writable(false);
+// Retained for backwards compatibility with components that gate on readiness.
+// With synchronous message loading the catalog is ready immediately, so this
+// starts true and never needs to flip.
+export const i18nReady = writable(true);
 
-// Wait for the initial locale to be loaded
+// Messages are loaded synchronously, but keep the async signature so callers
+// awaiting readiness continue to work.
 export const initializeI18n = async () => {
 	await waitLocale();
 	i18nReady.set(true);

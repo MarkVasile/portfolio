@@ -1,32 +1,42 @@
 {
   "hero": {
     "title": "マーク・ヴァシレ",
-    "subtitle": "ソフトウェアエンジニア",
-    "description": "革新的なソリューションを構築し、テクノロジーと創造性の交差点を探求しています。もちろん日本語も話せますよ。書いたり読んだりするのも出来ますがやはり日本人のレベルまで道が長いでしょうかと思います。",
-    "cta": "作品を見る"
+    "subtitle": "シニアソフトウェアエンジニア／独立系請負開発者",
+    "description": "25年以上にわたり、信頼性の高い本番システムの設計・構築・保守を手がけてきたシニアソフトウェアエンジニア兼独立系請負開発者です。RustやNode.jsのバックエンドから、モダンなWeb・モバイルのフロントエンドまで対応します。日本語でのやり取りにも対応しています。",
+    "cta": "実績を見る",
+    "downloadCv": "履歴書をダウンロード"
   },
   "about": {
     "title": "私について",
-    "description": "フルスタック開発、AI統合、システムアーキテクチャに専門知識を持つ情熱的なソフトウェアエンジニアです。現実世界の問題を解決するツールを構築し、新しいテクノロジーを探求することが大好きです。",
+    "description": "信頼できるソフトウェアを構築し、それを稼働させ続けることを大切にしています。25年以上にわたり、不動産・教育・IT サービスなど様々な業界のクライアント向けに、本番システムを一貫して提供してきました（CodeAwareness の名義で個人事業として活動）。重視するのは信頼性です。確実にリリースでき、稼働し続け、引き継ぐチームが保守できるシステムを目指しています。",
     "skills": "スキルと技術",
     "focus": "現在の焦点",
     "focusItems": {
-      "aiTools": "AI駆動の開発ツール",
-      "codeIntelligence": "コード認識とインテリジェンス",
-      "productivity": "開発者生産性ソリューション",
+      "aiTools": "AI を活用した開発ツール",
+      "codeIntelligence": "コードインテリジェンスと分析",
+      "productivity": "生産性・コラボレーションシステム",
       "openSource": "オープンソースへの貢献"
     },
     "stats": {
-      "yearsExperience": "年の経験",
-      "projectsCompleted": "プロジェクト完了",
-      "technologies": "技術",
-      "passionForCode": "コードへの情熱",
-      "continents": "大陸"
+      "yearsExperience": "ソフトウェア開発の年数",
+      "patents": "登録特許（米国・日本）",
+      "systemsDelivered": "設計・納品したシステム数",
+      "industries": "対応した業界数"
+    },
+    "aiWorkflow": {
+      "title": "AI との協働の進め方",
+      "description": "AI コーディングエージェントも、他の強力なツールと同様に、厳格なエンジニアリング規律のもとで扱います。すべての変更は、記録された根拠を伴うトラッキング済みのインテントから始めます。応急処置よりも根本原因の診断を重視し、複数のリポジトリにまたがる作業を同時に調整しながら、コミットを整理された独立した状態に保ちます。その結果、クライアントが信頼を寄せる信頼性を犠牲にすることなく、高いスループットを実現しています。",
+      "principles": {
+        "intent": "根拠を記録した、インテント単位の変更管理",
+        "rootCause": "応急処置ではなく根本原因の診断",
+        "commits": "整理された独立したコミットと、レビュー可能な履歴",
+        "multiRepo": "複数リポジトリにまたがる協調的なデリバリー"
+      }
     }
   },
   "github": {
-    "title": "GitHubポートフォリオ",
-    "subtitle": "オープンソースへの貢献とプロジェクトを探索",
+    "title": "GitHub",
+    "subtitle": "オープンソースへの貢献とプロジェクト",
     "personal": "個人プロジェクト",
     "codeawareness": "CodeAwareness",
     "viewProfile": "プロフィールを見る",
@@ -35,10 +45,14 @@
   },
   "patents": {
     "title": "特許",
-    "subtitle": "発明者または共同発明者として登録された特許",
+    "subtitle": "第三者による独立した実績の裏付け — 米国および日本の特許庁で登録された2件の特許。",
     "items": {
       "emfDesign": "電磁波分布の可視化と、エミッタの最適配置のための協働型Webベース設計システム",
       "devSupport": "低ノイズ・コラボレーションシステム"
+    },
+    "relevance": {
+      "emfRelevance": "電磁波エミッタ配置のWebベース可視化と協働最適化 — RF プランニング、アンテナ・センサーの配置、通信・防衛分野のカバレッジ設計に関連します。",
+      "devRelevance": "チームやツールをまたいだリアルタイム協働のための、低ノイズかつプライバシーを保護するシステム — CodeAwareness 開発者プラットフォームの基盤です。"
     },
     "roles": {
       "inventor": "発明者",
@@ -50,72 +64,67 @@
     }
   },
   "blogs": {
-    "title": "執筆とブログ",
-    "subtitle": "様々なプラットフォームでの執筆をフォロー",
-    "pageTitle": "ブログ",
-    "pageDescription": "ソフトウェア開発、AI、テクノロジーに関する私の思考と洞察を共有します。",
-    "medium": "Medium記事",
-    "substack": "Substackニュースレター",
-    "ghost": "Ghostブログ",
+    "title": "執筆",
+    "subtitle": "ソフトウェアエンジニアリング、システム、開発者向けツールに関するノート。",
     "readMore": "続きを読む",
-    "recentArticles": "最近の記事",
-    "newsletterTopics": "ニュースレタートピック",
-    "technicalContent": "技術コンテンツ",
-    "ctaDescription": "ソフトウェア開発、AI、テクノロジーのトレンドに関する最新の考えをフォローしてください。"
+    "descriptions": {
+      "medium": "ソフトウェア開発とエンジニアリング実務に関する技術記事。",
+      "substack": "CodeAwareness ニュースレター — プラットフォームと開発者ツールの最新情報。",
+      "ghost": "より長文の技術記事とチュートリアル。"
+    }
   },
   "projects": {
-    "title": "過去のプロジェクト",
-    "subtitle": "実験的なプロジェクトとクリエイティブコーディングの実験",
+    "title": "主な実績",
+    "subtitle": "私が設計・構築・納品してきた本番システムとアプリケーション — クライアント向けプラットフォーム、開発者ツール、オープンソースの成果。",
     "comingSoon": "近日公開",
     "viewProject": "プロジェクトを見る",
-    "active": "アクティブ",
-    "planned": "計画中",
+    "active": "稼働中",
     "archived": "アーカイブ",
-    "showLess": "少なく表示",
-    "showAll": "全{count}プロジェクトを表示",
-    "collaborationTitle": "コラボレーションに興味がありますか？",
-    "collaborationDescription": "新しいプロジェクトに取り組み、革新的なアイデアを探求することに常に興奮しています。一緒に素晴らしいものを作りましょう！",
+    "since": "稼働開始",
+    "delivered": "納品",
+    "collaborationTitle": "新しい案件を受け付けています",
+    "collaborationDescription": "契約・コンサルティングのお仕事をお受けしています — 新規システムの構築、レガシーコードのモダナイズ、既存プロダクトへの AI 統合など。ご検討中のプロジェクトがあれば、ぜひご相談ください。",
     "getInTouch": "お問い合わせ",
-    "kawaRebuilt": "Kawa Code を使用して、レガシーコードからモダンなフレームワークへ完全に再構築されたプロジェクト",
+    "kawaRebuilt": "Kawa Code を用いて、レガシーコードからモダンなフレームワークへ再構築したライブデモです。",
     "descriptions": {
-      "listingpr": "不動産業者管理プラットフォーム",
-      "speedOfLight": "光の速度電界をシミュレートするプロジェクト",
-      "hypercube": "多次元ハイパーキューブでXMASという単語が任意の方向に何回現れるかをカウントする",
-      "KawaCode": "AI駆動の開発環境。",
-      "mongoAlias": "MongoDB Nodeドライバーの上に構築された軽量なエイリアシング層",
-      "emacsPackage": "Code Awareness用のEmacsパッケージ",
-      "portfolio": "私のポートフォリオウェブサイト",
-      "lisa": "日本アーティストLisaのファンクラブ。様々な言語で記事を翻訳するコミュニティ",
-      "shibajimu-web": "日本のクライアント向けにゼロから構築したコースウェア・メンターシップのWeb・モバイルプラットフォーム。",
-      "shibajimu-dash": "芝侍アカデミーの管理ダッシュボード",
-      "clique-in-style": "結婚式プランナーのためのファッションマッチャー、Web・モバイル（タブレット）対応。",
-      "kanji-multitouch": "マルチタッチ操作で日本語の漢字学習を探求した実験的なiOSアプリ。"
+      "listingpr": "不動産エージェント向けの管理プラットフォーム。",
+      "speedOfLight": "媒質中を光速で伝播する電界のシミュレーションと可視化。",
+      "hypercube": "多次元ハイパーキューブ内で XMAS という単語があらゆる方向に現れる回数を数えるソルバー。",
+      "KawaCode": "AI 駆動の開発プラットフォーム。",
+      "mongoAlias": "MongoDB Node.js ドライバーの上に構築した軽量なエイリアシング層。",
+      "emacsPackage": "Code Awareness プラットフォーム用の Emacs パッケージ。",
+      "portfolio": "このポートフォリオサイト — サーバープリレンダリングされた SvelteKit 製、多言語対応。",
+      "lisa": "日本のアーティスト Lisa のファンコミュニティ。記事を複数言語に翻訳します。",
+      "shibajimu-web": "日本のクライアント向けにゼロから構築した、Web・モバイル対応のコースウェア／メンターシップ・プラットフォーム。",
+      "shibajimu-dash": "芝侍メンターシップアカデミーの管理ダッシュボード。",
+      "clique-in-style": "ウェディングプランナー向けのファッションマッチングツール（Web・タブレット対応）。",
+      "kanji-multitouch": "マルチタッチ操作で日本語の漢字学習を探求した実験的な iOS アプリ。",
+      "champforge": "League of Legends 向けのバトル設定ツール。",
+      "bitli": "IT マネージドサービスプロバイダー向けの管理プラットフォーム。",
+      "puddlejump": "大規模無線 LAN 展開のための Wi-Fi アクセスポイント配置ツール。",
+      "colibri": "ビデオグラファー向けのスケジューリング・請求・管理プラットフォーム。"
     }
   },
   "contact": {
     "title": "お問い合わせ",
-    "subtitle": "機会、コラボレーションについて話し合ったり、テクノロジーについておしゃべりしましょう。",
-    "email": "メールを送る",
-    "emailTitle": "メールを送る",
-    "social": "フォローする",
-    "socialTitle": "フォローする",
-    "website": "ウェブサイト",
-    "websiteTitle": "ウェブサイト",
+    "subtitle": "プロジェクトや案件、私がお手伝いできることについて、お気軽にご相談ください。",
+    "email": "メール",
     "copyEmail": "メールをコピー",
-    "visitSite": "サイトを訪問",
-    "sendEmail": "メールを送信",
-    "connectLinkedIn": "LinkedInでつながる",
-    "buildTogetherTitle": "一緒に素晴らしいものを作りましょう",
-    "buildTogetherDescription": "ソフトウェアエンジニアを探している、プロジェクトでコラボレーションしたい、またはテクノロジーについておしゃべりしたい場合でも、お気軽にお声がけください！",
+    "copied": "コピーしました！",
+    "documentsTitle": "資料",
+    "downloadCv": "履歴書（PDF）",
+    "capabilityStatement": "ケイパビリティ・ステートメント（PDF）",
+    "buildTogetherTitle": "プロジェクトについてお話ししましょう",
+    "buildTogetherDescription": "ゼロからのシステム構築、レガシーアプリケーションのモダナイズ、既存プロダクトへの AI 統合など、どのようにお手伝いできるか喜んでご相談に応じます。",
     "footer": {
       "rightsReserved": "全著作権所有。",
-      "builtWith": "Svelteで❤️と共に構築",
+      "builtWith": "© 2025 Mark Vasile ・ SvelteKit で構築",
       "sections": {
         "about": "について",
         "github": "GitHub",
         "patents": "特許",
-        "blogs": "ブログ",
-        "projects": "プロジェクト",
+        "blogs": "執筆",
+        "projects": "実績",
         "contact": "お問い合わせ"
       }
     }
@@ -124,8 +133,8 @@
     "about": "について",
     "github": "GitHub",
     "patents": "特許",
-    "blogs": "ブログ",
-    "projects": "プロジェクト",
+    "blogs": "執筆",
+    "projects": "実績",
     "contact": "お問い合わせ"
   },
   "common": {

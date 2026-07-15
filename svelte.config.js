@@ -11,7 +11,9 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: 'index.html',
+			// No SPA fallback: every route is prerendered to real HTML so the
+			// site is crawlable and produces link previews on a plain fetch.
+			fallback: undefined,
 			precompress: false,
 			strict: true
 		})
