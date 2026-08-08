@@ -11,7 +11,14 @@
 		<div class="hero-content">
 			<h1 class="hero-title">{$_('hero.title')}</h1>
 			<h2 class="hero-subtitle">{$_('hero.subtitle')}</h2>
-			<p class="hero-description">{$_('hero.description')}</p>
+			<p class="hero-description">
+				{$_('hero.description')}{$_('hero.creatorBefore')}<a
+					class="hero-link"
+					href="https://kawacode.ai"
+					target="_blank"
+					rel="noopener noreferrer">{$_('hero.creatorLink')}</a
+				>{$_('hero.creatorAfter')}
+			</p>
 
 			<div class="hero-actions">
 				<button class="btn" onclick={() => scrollToSection('projects')}>
@@ -84,6 +91,17 @@
 		max-width: 500px;
 	}
 	
+	.hero-link {
+		color: #4fab2f;
+		font-weight: 600;
+		text-decoration: none;
+		border-bottom: 1px solid rgba(79, 171, 47, 0.4);
+	}
+
+	.hero-link:hover {
+		border-bottom-color: #4fab2f;
+	}
+
 	.hero-actions {
 		display: flex;
 		gap: 1rem;
