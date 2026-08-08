@@ -39,7 +39,7 @@
 			technologies: ['TypeScript', 'Rust', 'AI/ML', 'WebSocket', 'IPC'],
 			state: 'active',
 			year: 2019,
-			url: 'https://github.com/CodeAwareness',
+			url: 'https://kawacode.ai',
 			image: '/kawa-code-logo-white.jpg'
 		},
 		{
